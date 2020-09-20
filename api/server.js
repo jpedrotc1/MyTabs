@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(bodyParser.json());
 
-require('./application/routes/patient.routes')(app);
+require('./application/routes/tab.routes')(app);
 
 const PORT = 3000;
 app.listen(PORT, () => {
