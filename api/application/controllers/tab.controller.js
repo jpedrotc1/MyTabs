@@ -27,8 +27,7 @@ async function findOne(req, res) {
 
     try {
 
-        console.log(req.params)
-        const response = await TabService.findOneTab(req.params.tabId);
+        const response = await TabService.findOneTab(req.params.id);
 
         if (!response) {
             res.status(500).send({

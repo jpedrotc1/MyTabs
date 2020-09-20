@@ -5,6 +5,6 @@ module.exports = (app) => {
     app.post('/tabs', tabController.create);
 
     // Retrieve one specific tab
-    app.get('/tabs/:tabId', tabController.findOne);
+    app.get('/tabs/:id', tabController.findOne);
 
 }
