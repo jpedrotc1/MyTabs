@@ -29,8 +29,17 @@ async function findOneTab(tabId){
     return tab
 }
 
+async function findAllTabs(){
+
+    const tabs = await Tab.find();
+    
+    return tabs
+
+};
+
 
 module.exports = {
     createTab,
-    findOneTab
+    findOneTab,
+    findAllTabs
 }

@@ -7,4 +7,7 @@ module.exports = (app) => {
     // Retrieve one specific tab
     app.get('/tabs/:id', tabController.findOne);
 
+    // Retrieve all tabs
+    app.get('/tabs',tabController.findAll);
+
 }

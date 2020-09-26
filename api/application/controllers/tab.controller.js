@@ -22,7 +22,7 @@ async function create(req, res) {
 };
 
 
-// Find a single Tab with a tabId
+// Find a single Tab with id
 async function findOne(req, res) {
 
     try {
@@ -41,8 +41,22 @@ async function findOne(req, res) {
     }
 };
 
+async function findAll(req,res) {
+
+    const response = await TabService.findAllTabs();
+
+    if (!response) {
+        res.status(500).send({
+            message: "Some error occurred while finding the Tabs."
+        })
+    } else {
+        res.send(response);
+    }
+};
+
 
 module.exports = {
     create,
-    findOne
+    findOne,
+    findAll
 }
