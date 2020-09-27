@@ -2,6 +2,7 @@ import { Navbar, Nav, Container, Row, Col, Button } from 'react-bootstrap';
 import TabCard from '../components/tabcard';
 import React, { useState, useEffect } from 'react';
 import api from '../middlewares/api';
+import './tablist.css'
 
 function TabList() {
 
@@ -18,19 +19,21 @@ function TabList() {
         fetchData();
     }, []);
 
+    //Ainda precisa de muitos ajustes, fiz apenas o grosso.
     return (
         <div className="tablist">
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">MyTabs</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </Navbar>
-            <Container className="pt-5">
-                <Row className="pt-2">
+            <Container className="container" >
+                
                     {tabs.map((tab) => (
-                        <Col key={tab._id}><TabCard tab={tab}></TabCard></Col>)
+                        <TabCard tab={tab} key={tab._id}></TabCard>)
                     )}
-                </Row>
+                
             </Container>
+            
         </div>
     );
 }
