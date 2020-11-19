@@ -1,11 +1,12 @@
-import React from 'react';
-import './App.css';
-import TabList from './pages/tabslist';
+import React from "react";
+import "./App.css";
+
+import MainPage from "./pages/mainpage";
 
 function App() {
   return (
     <div className="App">
-      <TabList></TabList>
+      <MainPage></MainPage>
     </div>
   );
 }
